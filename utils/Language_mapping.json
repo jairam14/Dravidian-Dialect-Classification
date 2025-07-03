@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Jul  3 17:47:35 2025
+
+@author: r_jairam
+"""
+
+{
+  "Tamil": {
+    "Madras_Vazhaku": 1,
+    "Kongu_Tamil": 2,
+    "Madurai_Vazhaku": 3,
+    "Thoothukudi_Tamil": 4
+  },
+  "Malayalam": {
+    "Kottayam": 1,
+    "Kozhikode": 2,
+    "Thrissur": 3,
+    "Trivandrum": 4
+  },
+  "Kannada": {
+    "Dakshina_Kannada": 1,
+    "Udupi": 2,
+    "Mandya": 3,
+    "Dhaarwad": 4
+  }
+}
