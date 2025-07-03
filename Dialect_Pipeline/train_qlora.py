@@ -26,7 +26,7 @@ from peft import (
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def load_config(path="config_train.yaml"):
+def load_config(path="config_qlora.yaml"):
     with open(path, "r") as f:
         return yaml.safe_load(f)
 
