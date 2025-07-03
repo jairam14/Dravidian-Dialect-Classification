@@ -42,9 +42,6 @@ labels:
   - "31"  # DUMMY
   - "32"  # DUMMY — Whisper requires 33 output classes total
 
-quantization_config:
-  bits: 8
-  quant_method: bitsandbytes_8bit
 
 lora:
   rank: 32
