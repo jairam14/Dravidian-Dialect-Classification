@@ -1,4 +1,4 @@
-# Kannada Dialect Classification (Whisper + LoRA)
+# Dialect Classification (Whisper + LoRA)
 
 This repository contains code for fine-tuning the Whisper model using LoRA-32 to classify dialects.
 
