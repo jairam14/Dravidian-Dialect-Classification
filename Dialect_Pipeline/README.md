@@ -1,13 +1,15 @@
-# Dialect Classification Pipeline using WhispAdapt Model
+#  WhispAdapt: Whisper-based Lightweight Dialect Classification
 
-This repository contains a Python codes for 
-- preparing and uploading dialect-specific speech datasets (Tamil, Malayalam, Kannada) to the Hugging Face Hub.
-- Trianing and evaluating the WhispAdapt Model
+This repository contains the codebase for **WhispAdapt**, a framework designed for dialect classification in Dravidian languages. It builds on a pretrained Whisper encoder, which serves as a robust feature extractor and is adapted using Parameter-Efficient Fine-Tuning (PEFT) techniques such as LoRA and QLoRA. Instead of fine-tuning the entire model, only a small number of trainable parameters are introduced through lightweight adapters, enabling efficient adaptation to new tasks. A lightweight classification head is placed on top of the Whisper encoder to perform dialect prediction.
 
-
+---
 
 ##  Usage
 
 1. Install dependencies:
    ```bash
    pip install -r requirements.txt
+
+2. Feature Extrcation
+    ```bash
+   python feature_extraction_and_upload.py
