@@ -58,7 +58,7 @@ def prepare_dataset(batch, processor):
 
 def main():
     parser = argparse.ArgumentParser(description="Feature extraction and upload pipeline")
-    parser.add_argument("--config", type=str, default="config.yaml", help="Path to config file")
+    parser.add_argument("--config", type=str, default="config_features.yaml", help="Path to config file")
     parser.add_argument("--mapping", type=str, default="language_mapping.json", help="Path to label mapping JSON")
     args = parser.parse_args()
 
