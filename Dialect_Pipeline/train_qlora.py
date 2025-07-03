@@ -1,4 +1,7 @@
-
+'''
+Training  WhispAdapt model using QLoRA (Rank-32) for Dialect Classification
+Author: jairam_r
+'''
 
 import os
 import yaml
