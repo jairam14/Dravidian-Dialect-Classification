@@ -5,12 +5,25 @@ Author: jairam_r
 import os
 import shutil
 import random
+import yaml
 from datasets import Dataset, DatasetDict, Audio, ClassLabel
 
-def split_dataset(source_dir, output_base_dir, split_ratio=(0.2, 0.7, 0.1)):
+def load_label_mapping(yaml_path, language):
+    """
+    Loads label mapping for the specified language from a YAML file.
+    """
+    with open(yaml_path, 'r') as f:
+        all_mappings = yaml.safe_load(f)
+    if language not in all_mappings:
+        raise ValueError(f"Language '{language}' not found in label mapping YAML.")
+    return all_mappings[language]
+
+def split_dataset(source_dir, output_base_dir, split_ratio=(0.7, 0.2, 0.1)):
     """
     Splits dataset into train, test, and validation folders by class labels.
     """
+    assert sum(split_ratio) == 1.0, "Split ratio must sum to 1.0"
+    
     for label in os.listdir(source_dir):
         src_label_dir = os.path.join(source_dir, label)
         if not os.path.isdir(src_label_dir):
