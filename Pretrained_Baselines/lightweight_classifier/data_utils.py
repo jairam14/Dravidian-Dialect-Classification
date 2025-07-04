@@ -7,7 +7,7 @@ import shutil
 import random
 from datasets import Dataset, DatasetDict, Audio, ClassLabel
 
-def split_dataset(source_dir, output_base_dir, split_ratio=(0.7, 0.2, 0.1)):
+def split_dataset(source_dir, output_base_dir, split_ratio=(0.2, 0.7, 0.1)):
     """
     Splits dataset into train, test, and validation folders by class labels.
     """
